@@ -14,9 +14,20 @@ async function getWeather(e) {
       { mode: 'cors' }
     );
     const cityData = await response.json();
-    console.log(cityData.address);
-    console.log(cityData.days[0].temp);
-    console.log(cityData.description);
+    const cityName = await cityData.address;
+    const cityDays = await cityData.days;
+    const cityDes = await cityData.description;
+
+    const weatherData = {
+      cityName,
+      cityDays,
+      cityDes,
+    };
+
+    console.log(weatherData);
+    // console.log(cityData.address);
+    // console.log(cityData.days[0].temp);
+    // console.log(cityData.description);
   } catch (error) {
     console.log(error);
   }
