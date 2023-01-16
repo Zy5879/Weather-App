@@ -1,6 +1,5 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-// const { Template } = require('webpack');
 
 module.exports = {
   mode: 'development',
@@ -11,7 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name][contenthash].js',
     clean: true,
-    assetModuleFilename: '[name][ext]',
+    assetModuleFilename: '[name].[ext]',
   },
   devtool: 'inline-source-map',
   devServer: {
