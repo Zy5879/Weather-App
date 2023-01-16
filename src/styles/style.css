@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+/* header */
+
+/* body */
+
+.forecast {
+  display: grid;
+}
